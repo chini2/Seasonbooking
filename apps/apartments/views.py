@@ -65,8 +65,4 @@ def edit_apartment(request, apartment_id):
     return render(request, 'apartments/register_apartment.html', context)
 
 
-def apartments_delete(request, apartment_id):
-    apartments_delete = Apartment.objects.get(id = apartment_id)
-    apartments_delete.delete()
 
-    return redirect('index')
